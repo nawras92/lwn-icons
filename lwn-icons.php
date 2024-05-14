@@ -25,11 +25,11 @@ if (!defined('ABSPATH')) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
+add_action('init', 'learn_with_naw_lwn_icons_block_init');
 function learn_with_naw_lwn_icons_block_init()
 {
 	register_block_type(__DIR__ . '/build');
 }
-add_action('init', 'learn_with_naw_lwn_icons_block_init');
 
 // Add Styles
 add_action('enqueue_block_assets', 'learn_with_naw_lwn_icons_add_styles');
@@ -53,5 +53,19 @@ function learn_with_naw_lwn_icons_load_text_domain()
 		'lwn-icons',
 		false,
 		dirname(plugin_basename(__FILE__)) . '/languages'
+	);
+}
+// Load Translation of blocks after registering the blocks
+add_action('init', 'learn_with_naw_lwn_icons_load_block_translations');
+function learn_with_naw_lwn_icons_load_block_translations()
+{
+	$script_handle = generate_block_asset_handle(
+		'learn-with-naw/lwn-icons',
+		'editorScript'
+	);
+	wp_set_script_translations(
+		$script_handle,
+		'lwn-icons',
+		plugin_dir_path(__FILE__) . '/languages'
 	);
 }
