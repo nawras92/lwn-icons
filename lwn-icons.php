@@ -52,7 +52,7 @@ function learn_with_naw_lwn_icons_load_text_domain()
 	load_plugin_textdomain(
 		'lwn-icons',
 		false,
-		dirname(plugin_basename(__FILE__)) . '/languages'
+		plugin_dir_path(__FILE__) . '/languages'
 	);
 }
 // Load Translation of blocks after registering the blocks

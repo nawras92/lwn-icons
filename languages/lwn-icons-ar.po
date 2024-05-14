@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lwn Icons 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lwn-icons\n"
-"POT-Creation-Date: 2024-05-13T15:31:53+03:00\n"
-"PO-Revision-Date: 2024-05-14 17:36+0300\n"
+"POT-Creation-Date: 2024-05-14T17:45:29+03:00\n"
+"PO-Revision-Date: 2024-05-14 17:45+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -22,12 +22,16 @@ msgid "Lwn Icons"
 msgstr "اضافة مكون الأيقونات من LWN"
 
 #. Description of the plugin
-msgid "Example block scaffolded with Create Block tool."
-msgstr ""
+msgid "Integrate Material Icons With Gutenberg Editor"
+msgstr "يضيف أيقونات Material Google Icons لمحرر Gutenberg"
 
 #. Author of the plugin
-msgid "The WordPress Contributors"
-msgstr ""
+msgid "Nawras Ali"
+msgstr "نورس علي"
+
+#. Author URI of the plugin
+msgid "https://learnwithnaw.com"
+msgstr "https://learnwithnaw.com"
 
 #: build/index.js:1 src/edit.js:49
 msgid "Icon Size"
