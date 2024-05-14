@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "learn-with-naw/lwn-icons",
+  "version": "0.1.0",
+  "title": "Lwn Icons",
+  "category": "design",
+  "icon": "superhero",
+  "description": "Integrate Material Icons With Gutenberg Editor",
+  "attributes": {
+    "selectedIcon": {
+      "type": "string"
+    },
+    "iconSize": {
+      "type": "number",
+      "default": "32"
+    },
+    "iconColor": {
+      "type": "string"
+    }
+  },
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": true
+  },
+  "textdomain": "lwn-icons",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
