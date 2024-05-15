@@ -7,9 +7,10 @@
  * Version:           0.1.0
  * Author:            Nawras Ali
  * Author URI:        https://learnwithnaw.com
- * License:           GPL-2.0-or-later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * License:           GPL-3.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       lwn-icons
+ * GitHub Plugin URI: https://github.com/nawras92/lwn-icons
  *
  * @package LearnWithNaw
  */
@@ -18,13 +19,6 @@ if (!defined('ABSPATH')) {
 	exit(); // Exit if accessed directly.
 }
 
-/**
- * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
- *
- * @see https://developer.wordpress.org/reference/functions/register_block_type/
- */
 add_action('init', 'learn_with_naw_lwn_icons_block_init');
 function learn_with_naw_lwn_icons_block_init()
 {
@@ -39,7 +33,7 @@ function learn_with_naw_lwn_icons_add_styles()
 		'lwn-material-icons',
 		'https://fonts.googleapis.com/icon?family=Material+Icons',
 		[],
-		'',
+		'v142',
 		'all'
 	);
 	wp_enqueue_style('lwn-material-icons');
