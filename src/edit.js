@@ -2,17 +2,10 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
-import { BlockControls } from '@wordpress/block-editor';
-import { InspectorControls } from '@wordpress/block-editor';
-import { PanelBody } from '@wordpress/components';
-import { Toolbar, ToolbarButton } from '@wordpress/components';
 import { Button } from '@wordpress/components';
 import { Modal } from '@wordpress/components';
-import { ColorPalette } from '@wordpress/components';
-import { RangeControl } from '@wordpress/components';
 import { check } from '@wordpress/icons';
-import { edit } from '@wordpress/icons';
-import { trash } from '@wordpress/icons';
+import BlockSidebar from './components/BlockSidebar';
 import materialIcons from './material-icons';
 
 import './editor.scss';
@@ -38,39 +31,12 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
-			<InspectorControls>
-				<PanelBody title={__('Settings')}>
-					<p>{__('Icon Color', 'lwn-icon')}</p>
-					<ColorPalette
-						value={attributes.iconColor}
-						onChange={(color) => setAttributes({ iconColor: color })}
-					/>
-					<RangeControl
-						label={__('Icon Size', 'lwn-icons')}
-						value={attributes.iconSize}
-						onChange={(size) => setAttributes({ iconSize: size })}
-						min={5}
-						max={300}
-					/>
-				</PanelBody>
-			</InspectorControls>
+			<BlockSidebar
+				attributes={attributes}
+				setAttributes={setAttributes}
+				setOpen={setOpen}
+			/>
 
-			{attributes.selectedIcon && (
-				<BlockControls>
-					<Toolbar label="Options">
-						<ToolbarButton
-							icon={trash}
-							label={__('Delete Icon', 'lwn-icons')}
-							onClick={() => setAttributes({ selectedIcon: '' })}
-						/>
-						<ToolbarButton
-							icon={edit}
-							label={__('Replace Icon', 'lwn-icons')}
-							onClick={() => setOpen(true)}
-						/>
-					</Toolbar>
-				</BlockControls>
-			)}
 			<div {...blockProps}>
 				{!attributes.selectedIcon && (
 					<div className="wp-block-learn-with-naw-lwn-icons__user-control">
@@ -94,7 +60,7 @@ export default function Edit({ attributes, setAttributes }) {
 							<p className="wp-block-learn-with-naw-lwn-icons__user-selection">
 								<span>{__('You have selected: ', 'lwn-icons')}</span>
 								<i className="material-icons">
-									{attributes.selectedIcon.split(' ')[0]}
+									{attributes?.selectedIcon?.split(' ')[0]}
 								</i>
 							</p>
 							<Button variant="primary" onClick={() => setOpen(false)}>

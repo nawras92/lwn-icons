@@ -13,10 +13,11 @@
 		},
 		"iconSize": {
 			"type": "number",
-			"default": "32"
+			"default": "200"
 		},
 		"iconColor": {
-			"type": "string"
+			"type": "string",
+			"default": "#12B76A"
 		}
 	},
 	"example": {},
