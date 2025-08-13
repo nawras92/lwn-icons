@@ -19,5 +19,22 @@
 	},
 	"dependencies": {
 		"@wordpress/icons": "^9.48.0"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nawras92/lwn-icons.git"
+	},
+	"keywords": [
+		"WordPress",
+		"Block",
+		"Icons",
+		"LWN",
+		"Icons",
+		"Material",
+		"Icons"
+	],
+	"bugs": {
+		"url": "https://github.com/nawras92/lwn-icons/issues"
+	},
+	"homepage": "https://github.com/nawras92/lwn-icons#readme"
 }
