@@ -46,15 +46,16 @@ add_action( 'init', 'learn_with_naw_lwn_icons_block_init' );
  */
 function learn_with_naw_lwn_icons_add_styles() {
 	wp_register_style(
-		'lwn-material-icons',
-		'https://fonts.googleapis.com/icon?family=Material+Icons',
+		'lwn-material-symbols',
+		'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined',
 		array(),
-		'v142',
+		null,
 		'all'
 	);
-	wp_enqueue_style( 'lwn-material-icons' );
+	wp_enqueue_style( 'lwn-material-symbols' );
 }
 add_action( 'enqueue_block_assets', 'learn_with_naw_lwn_icons_add_styles' );
+
 
 /**
  * Loads the plugin text domain for translations.
