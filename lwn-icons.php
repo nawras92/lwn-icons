@@ -1,9 +1,10 @@
 <?php
 /**
  * Plugin Name:       Lwn Icons
- * Description:       Integrate Material Icons With Gutenberg Editor
- * Requires at least: 6.1
- * Requires PHP:      7.0
+ * Description:       Integrate Material Icons With Gutenberg Editor.
+ * Requires at least: 6.7
+ * Tested up: 6.8
+ * Requires PHP:      7.4
  * Version:           0.1.0
  * Author:            Nawras Ali
  * Author URI:        https://learnwithnaw.com
@@ -19,14 +20,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit(); // Exit if accessed directly.
 }
 
-add_action( 'init', 'learn_with_naw_lwn_icons_block_init' );
+/**
+ * Registers the LWN Icons block type.
+ *
+ * This function registers the block type by pointing to the `build`
+ * directory, which contains the compiled block files.
+ *
+ * @since 0.1.0
+ * @return void
+ */
 function learn_with_naw_lwn_icons_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
+add_action( 'init', 'learn_with_naw_lwn_icons_block_init' );
 
-
-// Add Styles
-add_action( 'enqueue_block_assets', 'learn_with_naw_lwn_icons_add_styles' );
+/**
+ * Enqueues Material Icons styles for both frontend and editor.
+ *
+ * This function registers and enqueues the Material Icons font stylesheet
+ * from Google Fonts so that icons can be used in the Gutenberg editor
+ * and on the site frontend.
+ *
+ * @since 0.1.0
+ * @return void
+ */
 function learn_with_naw_lwn_icons_add_styles() {
 	wp_register_style(
 		'lwn-material-icons',
@@ -37,9 +54,17 @@ function learn_with_naw_lwn_icons_add_styles() {
 	);
 	wp_enqueue_style( 'lwn-material-icons' );
 }
+add_action( 'enqueue_block_assets', 'learn_with_naw_lwn_icons_add_styles' );
 
-// Load Text Domain
-add_action( 'init', 'learn_with_naw_lwn_icons_load_text_domain' );
+/**
+ * Loads the plugin text domain for translations.
+ *
+ * This enables translation of plugin strings using `.mo` and `.po` files
+ * located in the `languages` directory.
+ *
+ * @since 0.1.0
+ * @return void
+ */
 function learn_with_naw_lwn_icons_load_text_domain() {
 	load_plugin_textdomain(
 		'lwn-icons',
@@ -47,16 +72,27 @@ function learn_with_naw_lwn_icons_load_text_domain() {
 		plugin_dir_path( __FILE__ ) . '/languages'
 	);
 }
-// Load Translation of blocks after registering the blocks
-add_action( 'init', 'learn_with_naw_lwn_icons_load_block_translations' );
+add_action( 'init', 'learn_with_naw_lwn_icons_load_text_domain' );
+
+/**
+ * Loads block-specific translations after registering blocks.
+ *
+ * This function ensures that the block JavaScript strings can be translated
+ * by WordPress, using JSON files generated during the build process.
+ *
+ * @since 0.1.0
+ * @return void
+ */
 function learn_with_naw_lwn_icons_load_block_translations() {
 	$script_handle = generate_block_asset_handle(
 		'learn-with-naw/lwn-icons',
 		'editorScript'
 	);
+
 	wp_set_script_translations(
 		$script_handle,
 		'lwn-icons',
 		plugin_dir_path( __FILE__ ) . '/languages'
 	);
 }
+add_action( 'init', 'learn_with_naw_lwn_icons_load_block_translations' );
