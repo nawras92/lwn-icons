@@ -47,7 +47,10 @@ add_action( 'init', 'learn_with_naw_lwn_icons_block_init' );
 function learn_with_naw_lwn_icons_add_styles() {
 	wp_register_style(
 		'lwn-material-symbols',
-		'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined',
+		/*
+		'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined', */
+		/* 'https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&display=swap', */
+			'https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Symbols+Outlined&family=Material+Symbols+Rounded&family=Material+Symbols+Sharp&display=swap',
 		array(),
 		null,
 		'all'
