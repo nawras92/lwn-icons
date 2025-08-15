@@ -17,7 +17,7 @@
     },
     "iconColor": {
       "type": "string",
-      "default": "#12B76A"
+      "default": "#1565C0"
     }
   },
   "example": {},

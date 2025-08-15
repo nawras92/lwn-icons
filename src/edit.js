@@ -4,6 +4,10 @@ import { useBlockProps } from '@wordpress/block-editor';
 import { Button, Modal } from '@wordpress/components';
 import { check } from '@wordpress/icons';
 import BlockSidebar from './components/BlockSidebar';
+import ModalHeaderActions from './components/ModalHeaderActions';
+
+// inside Modal
+
 import GenerateIconList from './utils/GenerateIconList';
 import useMaterialIcons from './hooks/useMaterialIcons';
 
@@ -61,8 +65,15 @@ export default function Edit({ attributes, setAttributes }) {
           <Modal
             size="large"
             className="wp-block-learn-with-naw-lwn-icons__icons-modal"
-            title={__('Please Select an Icon', 'lwn-icons')}
             onRequestClose={() => setOpen(false)}
+            title={__('Material Icon List', 'lwn-icons')}
+            headerActions={
+              <ModalHeaderActions
+                selectedIcon={attributes?.selectedIcon}
+                icons={icons}
+                setFilteredIcons={setFilteredIcons}
+              />
+            }
           >
             <GenerateIconList
               icons={icons}
@@ -73,26 +84,6 @@ export default function Edit({ attributes, setAttributes }) {
             />
 
             <div className="wp-block-learn-with-naw-lwn-icons__icons-details">
-              <p className="wp-block-learn-with-naw-lwn-icons__user-selection">
-                <span>{__('You have selected: ', 'lwn-icons')}</span>
-                <i className="material-icons material-symbols-outlined">
-                  {attributes?.selectedIcon}
-                </i>
-              </p>
-
-              <Button variant="primary" onClick={() => setOpen(false)}>
-                {__('Done')}
-              </Button>
-
-              <div className="wp-block-learn-with-naw-lwn-icons__search-icons">
-                <label>{__('Search Icons', 'lwn-icons')}</label>
-                <input
-                  type="text"
-                  value={searchValue}
-                  onChange={(event) => setSearchValue(event.target.value)}
-                />
-              </div>
-
               {/* CATEGORY LIST */}
               <div className="wp-block-learn-with-naw-lwn-icons__icons-list">
                 {filteredIcons.map((category, catIndex) => (
@@ -102,7 +93,7 @@ export default function Edit({ attributes, setAttributes }) {
                       {category.icons.map((icon, iconIndex) => (
                         <i
                           key={iconIndex}
-                          className={`material-icons material-symbols-outlined ${
+                          className={`material-symbols-outlined ${
                             attributes.selectedIcon === icon?.name
                               ? 'selected'
                               : ''
@@ -125,7 +116,7 @@ export default function Edit({ attributes, setAttributes }) {
 
         {attributes.selectedIcon && (
           <i
-            className="material-icons material-symbols-outlined"
+            className="material-symbols-outlined"
             style={{
               color: attributes.iconColor,
               fontSize: attributes.iconSize + 'px',

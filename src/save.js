@@ -5,7 +5,7 @@ export default function save({ attributes }) {
     <div {...blockProps}>
       {attributes.selectedIcon && (
         <i
-          className="material-icons material-symbols-outlined"
+          className="material-symbols-outlined"
           style={{
             color: attributes.iconColor,
             fontSize: attributes.iconSize + 'px',
