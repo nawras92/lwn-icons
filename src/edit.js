@@ -18,27 +18,7 @@ export default function Edit({ attributes, setAttributes }) {
   const { icons, message, loading, refetch, clearCache } = useMaterialIcons();
 
   const [open, setOpen] = useState(false);
-  const [searchValue, setSearchValue] = useState('');
   const [filteredIcons, setFilteredIcons] = useState([]);
-
-  useEffect(() => {
-    if (!icons || !Array.isArray(icons)) return;
-
-    if (searchValue.trim()) {
-      // Filter inside each category
-      const filtered = icons
-        .map((cat) => ({
-          ...cat,
-          icons: cat.icons.filter((icon) =>
-            icon?.name.toLowerCase().includes(searchValue.toLowerCase())
-          ),
-        }))
-        .filter((cat) => cat.icons.length > 0); // remove empty categories
-      setFilteredIcons(filtered);
-    } else {
-      setFilteredIcons(icons);
-    }
-  }, [searchValue, icons]);
 
   return (
     <>
@@ -86,6 +66,14 @@ export default function Edit({ attributes, setAttributes }) {
             <div className="wp-block-learn-with-naw-lwn-icons__icons-details">
               {/* CATEGORY LIST */}
               <div className="wp-block-learn-with-naw-lwn-icons__icons-list">
+                {filteredIcons.length === 0 && (
+                  <p>
+                    {__(
+                      'No icons found. Try adjusting your search or syncing the icon list.',
+                      'lwn-icons'
+                    )}{' '}
+                  </p>
+                )}
                 {filteredIcons.map((category, catIndex) => (
                   <div key={catIndex} className="icon-category">
                     <h3>{category.category?.toUpperCase()}</h3>
