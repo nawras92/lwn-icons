@@ -18,6 +18,18 @@
     "iconColor": {
       "type": "string",
       "default": "#1565C0"
+    },
+    "iconTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "link": {
+      "type": "url",
+      "default": ""
+    },
+    "linkTarget": {
+      "type": "string",
+      "default": "_self"
     }
   },
   "example": {},
