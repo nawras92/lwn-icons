@@ -5,7 +5,7 @@ export default function save({ attributes }) {
     <div {...blockProps}>
       {attributes.selectedIcon && (
         <i
-          className="material-symbols-outlined"
+          className="lwn-icon material-symbols-outlined"
           style={{
             color: attributes.iconColor,
             fontSize: attributes.iconSize + 'px',

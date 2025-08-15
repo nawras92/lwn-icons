@@ -1,0 +1,1 @@
+document.fonts?document.fonts.load('24px "Material Symbols Outlined"').then(function(){document.documentElement.classList.add("fonts-ready")}):window.addEventListener("load",function(){document.documentElement.classList.add("fonts-ready")});

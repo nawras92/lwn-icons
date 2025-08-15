@@ -1,20 +1,6 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
-
-.wp-block-learn-with-naw-lwn-icons {
-  // background-color: #21759b;
-  // color: #fff;
-  // padding: 2px;
+.lwn-icon.material-symbols-outlined {
+  visibility: hidden;
 }
-
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
+.fonts-ready .lwn-icon.material-symbols-outlined {
+  visibility: visible;
 }

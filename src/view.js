@@ -1,25 +1,29 @@
 /**
- * Use this file for JavaScript code that you want to run in the front-end
- * on posts/pages that contain this block.
+ * Font Load Detection for Material Symbols
  *
- * When this file is defined as the value of the `viewScript` property
- * in `block.json` it will be enqueued on the front end of the site.
+ * This immediately-invoked function checks whether the "Material Symbols Outlined"
+ * font has loaded. It adds a `fonts-ready` class to the <html> element once the font
+ * is ready, allowing CSS to reveal icons only after the font is loaded.
  *
- * Example:
+ * Purpose:
+ * - Prevents flash of unstyled text (FOUT) for icon fonts.
+ * - Works in modern browsers using the Font Loading API.
+ * - Provides a fallback for older browsers using window.onload.
  *
- * ```js
- * {
- *   "viewScript": "file:./view.js"
- * }
- * ```
+ * Usage:
+ * In CSS, hide icons by default and reveal them when `fonts-ready` is present:
  *
- * If you're not making any changes to this file because your project doesn't need any
- * JavaScript running in the front-end, then you should delete this file and remove
- * the `viewScript` property from `block.json`.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
+ * .lwn-icon.material-symbols-outlined { visibility: hidden; }
+ * .fonts-ready .lwn-icon.material-symbols-outlined { visibility: visible; }
  */
-
-/* eslint-disable no-console */
-console.log( 'Hello World! (from learn-with-naw-lwn-icons block)' );
-/* eslint-enable no-console */
+(function () {
+  if (document.fonts) {
+    document.fonts.load('24px "Material Symbols Outlined"').then(function () {
+      document.documentElement.classList.add('fonts-ready');
+    });
+  } else {
+    window.addEventListener('load', function () {
+      document.documentElement.classList.add('fonts-ready');
+    });
+  }
+})();

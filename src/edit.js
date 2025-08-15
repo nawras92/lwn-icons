@@ -1,13 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
 import { Button, Modal } from '@wordpress/components';
 import { check } from '@wordpress/icons';
 import BlockSidebar from './components/BlockSidebar';
 import ModalHeaderActions from './components/ModalHeaderActions';
-
-// inside Modal
-
 import GenerateIconList from './utils/GenerateIconList';
 import useMaterialIcons from './hooks/useMaterialIcons';
 
