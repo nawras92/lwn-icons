@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:       LWN Icons
- * Description:       Integrate Material Icons With Gutenberg Editor.
+ * Description:       Seamlessly add and customize Google Material Design icons within the Gutenberg editor.
  * Requires at least: 6.7
- * Tested up: 6.8
+ * Tested up:         6.8
  * Requires PHP:      7.4
  * Version:           1.0.0
  * Author:            Nawras Ali
- * Author URI:        https://learnwithnaw.com
+ * Plugin URI:        https://pro.learnwithnaw.com/lwn-icons
  * License:           GPL-3.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       lwn-icons

@@ -1,17 +1,18 @@
 # LWN Icons
 
 **Contributors:** Nawras Ali, The WordPress Contributors  
+**Plugin URI** https://pro.learnwithnaw.com/lwn-icons  
 **Tags:** block, material design, icons, Gutenberg  
 **Tested up to:** 6.8  
 **Stable tag:** 1.0.0  
 **License:** GPL-3.0-or-later  
 **License URI:** [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)  
 
-A WordPress plugin that integrates Google's Material Design icons with the Gutenberg editor.
+Easily add and customize Google Material Design icons in Gutenberg to enhance your WordPress content with sleek, interactive visuals.
 
 ## Description
 
-LWN Icons is a powerful WordPress plugin that seamlessly integrates Google's Material Design icons into your WordPress site. With this plugin, you can easily add modern and sleek icons directly within the Gutenberg editor, enhancing the visual appeal of your content. The plugin allows you to customize icon color, size, and in the upcoming version, add titles, links, and link targets.
+LWN Icons is a powerful WordPress plugin that seamlessly integrates Google's Material Design icons into your site. With LWN Icons, you can easily add modern, sleek icons directly within the Gutenberg editor to enhance your content’s visual appeal. The plugin lets you customize icon color, size, add titles, links, and link targets, making your icons fully interactive and perfectly tailored to your design.
 
 ## Installation
 
@@ -20,23 +21,88 @@ LWN Icons is a powerful WordPress plugin that seamlessly integrates Google's Mat
 
 ## Features
 
-- Browse and select from the full Google Material Design icons library.
-- Change icon color using a color picker or predefined options.
-- Adjust icon size with sliders or numeric input.
-- Seamless integration with Gutenberg blocks.
-- Next version (1.0.0) will add:
-  - Ability to sync the icon library with Google.
-  - Add titles, links, and link targets to icons.
+- Latest Google Material Icons
+  Automatically access thousands of up-to-date icons directly from Google’s Material Icons library.
+
+- Sync Anytime
+  Keep your icons current by syncing with Google Material Icons whenever you need.
+
+- Custom Links & Titles
+  Add clickable links, titles, and targets to icons for interactive designs.
+
+- Customizable Size & Color
+  Adjust icon size and color to perfectly match your theme or plugin.
+
+- Icon Search
+  Quickly find the icon you need using the built-in search feature.
+
+- Gutenberg Block Ready
+  Easily insert icons anywhere using the Gutenberg block editor.
+
+- Use Anywhere
+  Compatible with themes, plugins, and custom layouts across your WordPress site.
+
+- Smooth Display
+  Fixes front-end flash issues for icons, ensuring seamless loading and display.
+
+## Frequently Asked Questions
+
+### Q: How do I add an icon to my post or page?
+A: Simply add the **LWN Icons block** in the Gutenberg editor, click "Select an Icon," choose your desired icon, and close the modal.
+
+### Q: Can I customize the icon’s color and size?
+A: Yes! Use the **Block Attributes sidebar** to adjust the icon’s color and size to fit your theme or design.
+
+### Q: How do I add links or tooltips to icons?
+A: Select an icon, then in the Block Attributes sidebar, you can add a **URL**, a **title**, and choose whether it opens in the same tab or a new tab.
+
+### Q: How do I replace an existing icon?
+A: Select the icon you want to replace and click the **Pen (Edit) icon**. Then choose a new icon from the modal and close it.
+
+### Q: How can I delete an icon or block?
+A: Select the icon and click the **Trash button** in the upper toolbar. You can also delete the **entire LWN Icons block** if needed.
+
+### Q: Can I search for icons easily?
+A: Yes! Click "Select an Icon" and use the **search bar** in the modal to quickly find the icon you need.
+
+### Q: How do I sync with the latest Google Material Icons?
+A: In the icon selection modal, click **Sync with Google**, optionally clear the cache, and then click **Fetch and Cache Material Icons** to get the latest icons.
+
+### Q: Is this plugin compatible with all themes?
+A: LWN Icons is compatible with most themes, plugins, and custom layouts. It works seamlessly with the Gutenberg block editor.
+
+### Q: Will the icons display smoothly on the front-end?
+A: Yes! The plugin ensures smooth front-end display and fixes flash issues for icons during page load.
+
+### Q: Does LWN Icons include the latest Material Design icons?
+A: Yes! The plugin comes with the latest icons, but if you notice an icon is missing, simply **sync with Google Material Icons** in the icon selection modal to update your library.
+
 
 ## Screenshots
 
-1. **Icon Selection Interface**: Browse and select icons with search and filter options.  
-2. **Icon in Use**: Preview selected icons within posts or pages.  
-3. **Select an Icon**: Click the button to open a modal for icon selection.  
-4. **Search an Icon**: Use the search bar to find icons by keywords.  
-5. **Icons List**: Full list of available Google Material icons.  
-6. **Change Icon Color**: Customize the icon color using a color picker.  
-7. **Change Icon Size**: Adjust the icon size with sliders or numeric input.
+1. **Installation**: Install and activate the LWN Icons plugin.
+   lwn-icons-installation.gif
+
+2. **Add an Icon**: Add an icon to a post or page using the LWN Icons block.
+   lwn-icons-add-icon.gif
+
+3. **Customize Color & Size**: Adjust the color and size of an icon via the Block Attributes sidebar.
+   lwn-icons-customize-color-size.gif
+
+4. **Delete Icon**: Remove a single icon or delete the entire LWN Icons block.
+   lwn-icons-delete-icon.gif
+
+5. **Link & Title**: Add a link, tooltip title, and choose whether it opens in the same or new tab.
+   lwn-icons-link-title.gif
+
+6. **Replace Icon**: Swap an existing icon with a new one using the Pen (Edit) icon.
+   lwn-icons-replace-icon.gif
+
+7. **Search Icon**: Search for icons in the modal using keywords.
+   lwn-icons-search.gif
+
+8. **Sync with Google**: Sync with Google Material Icons, clear cache, and fetch the latest icons.
+   lwn-icons-sync-google.gif
 
 ## Changelog
 
