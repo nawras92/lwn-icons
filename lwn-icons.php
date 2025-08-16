@@ -49,7 +49,7 @@ function learn_with_naw_lwn_icons_add_styles() {
 		'lwn-material-symbols',
 		'https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Symbols+Outlined&family=Material+Symbols+Rounded&family=Material+Symbols+Sharp&display=swap',
 		array(),
-		'4.0.0',
+		null,
 		'all'
 	);
 	wp_enqueue_style( 'lwn-material-symbols' );
