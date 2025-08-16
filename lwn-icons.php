@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Lwn Icons
+ * Plugin Name:       LWN Icons
  * Description:       Integrate Material Icons With Gutenberg Editor.
  * Requires at least: 6.7
  * Tested up: 6.8
