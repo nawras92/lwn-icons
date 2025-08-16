@@ -58,24 +58,6 @@ add_action( 'enqueue_block_assets', 'learn_with_naw_lwn_icons_add_styles' );
 
 
 /**
- * Loads the plugin text domain for translations.
- *
- * This enables translation of plugin strings using `.mo` and `.po` files
- * located in the `languages` directory.
- *
- * @since 0.1.0
- * @return void
- */
-function learn_with_naw_lwn_icons_load_text_domain() {
-	load_plugin_textdomain(
-		'lwn-icons',
-		false,
-		plugin_dir_path( __FILE__ ) . '/languages'
-	);
-}
-add_action( 'init', 'learn_with_naw_lwn_icons_load_text_domain' );
-
-/**
  * Loads block-specific translations after registering blocks.
  *
  * This function ensures that the block JavaScript strings can be translated
