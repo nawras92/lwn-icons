@@ -4,7 +4,7 @@
 **Plugin URI** https://pro.learnwithnaw.com/lwn-icons  
 **Tags:** block, material design, icons, Gutenberg  
 **Tested up to:** 6.8  
-**Stable tag:** 1.0.0  
+**Stable tag:** 1.0.1  
 **License:** GPL-3.0-or-later  
 **License URI:** [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)  
 
