@@ -40,11 +40,16 @@ LWN Icons is a powerful WordPress plugin that seamlessly integrates Google's Mat
 
 ## Changelog
 
-### 0.1.0
-* Initial release
+### 1.0.1
+* Fix plugin check errors
+* Improve Styles
 
 ### 1.0.0
 * Updated Material Icons library
 * Added ability to sync icons with Google
 * Added icon title, link, and link target options
+
+### 0.1.0
+* Initial release
+
 
