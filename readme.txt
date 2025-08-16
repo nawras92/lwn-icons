@@ -66,28 +66,20 @@ Yes! The plugin comes with the latest icons, but if you notice an icon is missin
 ## Screenshots
 
 1. **Installation**: Install and activate the LWN Icons plugin.
-   lwn-icons-installation.gif
 
 2. **Add an Icon**: Add an icon to a post or page using the LWN Icons block.
-   lwn-icons-add-icon.gif
 
 3. **Customize Color & Size**: Adjust the color and size of an icon via the Block Attributes sidebar.
-   lwn-icons-customize-color-size.gif
 
 4. **Delete Icon**: Remove a single icon or delete the entire LWN Icons block.
-   lwn-icons-delete-icon.gif
 
 5. **Link & Title**: Add a link, tooltip title, and choose whether it opens in the same or new tab.
-   lwn-icons-link-title.gif
 
 6. **Replace Icon**: Swap an existing icon with a new one using the Pen (Edit) icon.
-   lwn-icons-replace-icon.gif
 
 7. **Search Icon**: Search for icons in the modal using keywords.
-   lwn-icons-search.gif
 
 8. **Sync with Google**: Sync with Google Material Icons, clear cache, and fetch the latest icons.
-   lwn-icons-sync-google.gif
 
 ## Changelog
 
